@@ -48,7 +48,7 @@ let dados = [
         descricao: "O Bulldog Francês é um cão de companhia charmoso e popular, conhecido por sua aparência compacta e expressão curiosa. Apesar de seu tamanho, ele possui uma personalidade vibrante e extrovertida.",
         personalidade: "Personalidade: Alegre, extrovertido, brincalhão, leal, adaptável.",
         porte: "Porte pequeno",
-        peso: "Peso: 8 e 14kg",
+        peso: "Peso: 8 a 14kg",
         vida: "Sua expectativa de vida é entre 10 a 12 anos",
         origem: "Origem: França",
         tags: "bulldog frances frenchie pequeno alegre extrovertido brincalhao leal adaptável",
