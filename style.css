@@ -1,144 +1,207 @@
-/* Importa a fonte Chakra Petch do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-/* Estiliza o corpo da página */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #ffdddd; /* Cor de fundo da página */
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    height: 100vh; /* Preenche a altura total da viewport */
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o padding padrão */
+    font-family: "Chakra Petch", sans-serif;
+    background-color: #ffdddd;
     background-image: url('fundo.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-/* Estiliza os títulos h1 */
-h1 {
-    margin-top: 4rem;
-    font-size: 2.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    letter-spacing: 0.4rem; /* Espaçamento entre letras */
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+main {
+    flex: 1;
+}
+
 header {
     position: relative;
 }
+
+h1 {
+    font-size: 2.5rem; 
+    color: #222831;
+    text-align: center; 
+    letter-spacing: 0.4rem; 
+}
+
+.titulo-container {
+    text-align: center;
+    margin: 0 auto 2rem auto;
+    padding: 0 1rem;
+    max-width: 800px; 
+}
+
+.titulo-container h1 {
+    font-size: 2.5rem;
+    color: #222831;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+    color: #000;
+    font-weight: 400;
+}
+
 .logo {
     position: fixed;
     top: 20px;
     left: 20px;
-    width: 10%; /* A logo ocupará 10% da largura da tela */
+    width: 10%; 
 }
 
-/* Estiliza as seções da página */
 section {
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 3rem; 
 }
 
-/* Estiliza os inputs dentro das seções */
 section input {
-    width: 30rem; /* Largura dos inputs */
-    border: none; /* Remove a borda padrão */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 1.5rem; /* Borda arredondada */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
-    color: #000000; /* Cor do texto */
-    font-size: 1rem; /* Tamanho da fonte */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
+    width: 30rem; 
+    border: none;
+    padding: 1rem; 
+    border-radius: 1.5rem; 
+    margin-bottom: 1rem; 
+    color: #000; 
+    font-size: 1rem; 
+    box-sizing: border-box; 
 }
 
-/* Estiliza os botões dentro das seções */
+section p {
+    background-color: #f8b5ff;
+    border: 2px solid #e07be0;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #4a004a;
+    font-weight: 500;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 section button {
-    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #ff7474; /* Cor de fundo do botão */
-    color: #F5F7F8; /* Cor do texto do botão */
-    font-size: 1rem; /* Tamanho da fonte */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    padding: 0.8rem 1.2rem; 
+    border: none; 
+    border-radius: 1.5rem; 
+    background: linear-gradient(135deg, #d68aff, #b36bff);
+    color: #F5F7F8;
+    font-size: 1rem; 
+    cursor: pointer; 
+    transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.2s ease;
 }
 
-/* Adiciona efeito hover ao botão de pesquisa */
 section button:hover {
-    background-color: #ff0000; /* Muda a cor de fundo ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+    background: linear-gradient(135deg, #c864fe, #9e4bff); 
+    box-shadow: 0 0 20px 8px rgba(214, 138, 255, 0.5); 
+    transform: translateY(-1px); 
 }
 
-/* Estiliza a caixa de resultados da pesquisa */
-.resultados-pesquisa {
-    width: 60rem; /* Largura máxima da caixa de resultados */
-    height: 46vh; /* Altura máxima da caixa de resultados */
-    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-    margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 0.6rem; /* Borda arredondada */
+.card-raca {
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffe6f2;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    min-height: 350px; 
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.2s ease;
+}
+.card-raca:hover {
+    transform: scale(1.02); 
 }
 
-/* Estiliza cada item de resultado */
-.item-resultado {
-    background: #ffeeee; /* Cor de fundo dos itens */
-    border-radius: 0.6rem; /* Borda arredondada */
-    padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+.conteudo-texto {
+    flex: 1 1 55%;
+    color: #2d0033;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.6;
+    margin-left: 1rem;
 }
 
-/* Estiliza os títulos dentro dos itens de resultado */
-.item-resultado h2 {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
+.conteudo-texto h2 {
+    color: #5e1a94;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
 }
 
-/* Estiliza os links dentro dos itens de resultado */
-.item-resultado a {
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #30475E; /* Cor do texto dos links */
+.conteudo-texto p {
+    margin: 0.6rem 4.5rem; 
 }
 
-/* Estiliza os links quando são passados o mouse sobre */
-.item-resultado a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+.linha-infos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 0.5rem;
+    justify-content: flex-start;
 }
 
-/* Estiliza a descrição meta dentro dos itens de resultado */
-.descricao-meta {
-    color: #45474B; /* Cor do texto */
-    margin: 0.5rem 0; /* Margem acima e abaixo */
+.imagem-cachorro {
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: center;
 }
 
-/* Estiliza o rodapé da página */
+.imagem-cachorro img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
 footer {
-    color: #000000; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    padding: 0; /* Espaçamento interno */
-    width: 100%; /* Largura total da página */
-    position: static;
-    bottom: 0; /* Alinha ao fundo da página */
-    font-size: 1rem; /* Tamanho da fonte */
-    color: #333; /* Cor dos links */
-    }
-    footer a:hover {
-        color: #007bff; /* Cor dos links ao passar o mouse */
-    }
-      .fab { /* Estiliza todos os ícones da biblioteca Font Awesome */
-        color: #0000ff;
+    background: linear-gradient(135deg, #f8b5ff, #f3a7ff);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #333;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+footer p {
+    margin: 0.4rem 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #8e2de2;
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem; /* Tamanho da fonte em telas menores */
-        margin-top: 16rem;
-        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
-    }
     body { 
         background-image: url('fundotelasmenores.png');
         background-attachment: fixed;
@@ -146,64 +209,133 @@ footer {
         background-position: center center;
         background-repeat: no-repeat;
     }
-    .logo {
-        width: 20%; /* Aumenta a largura da logo em telas menores */
-        margin-top: 1rem;
-    }
-    section input {
-        width: 25rem; /* Largura dos inputs em telas menores */
-        padding: 0.8rem; /* Espaçamento interno em telas menores */
-    }
-
-    .resultados-pesquisa {
-        width: 40rem; /* Largura da caixa de resultados em telas menores */
-        height: 40vh; /* Altura da caixa de resultados em telas menores */
-    }
-
-    .item-resultado h2 {
-        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
-    }
-}
-
-/* Responsividade para celulares */
-@media (max-width: 480px) {
 
     h1 {
-        font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
-        margin-top: 12rem;
-        letter-spacing: 0.1rem; /* Espaçamento entre letras em telas pequenas */
-    }
-
-    body { 
-        background-image: url('fundotelasmenores.png');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        }
-    .logo {
-        width: 20%; /* Aumenta a largura da logo em telas menores */
+        font-size: 2rem;
         margin-top: 1rem;
-        }
+        letter-spacing: 0.2rem; 
+    }
+
+    .titulo-container h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+
+    .logo {
+        position: relative;
+        width: 20%; 
+        margin-top: 1rem;
+    }
+
     section input {
-        width: 17rem; /* Largura total dos inputs em telas pequenas */
+        width: 90%; 
+        padding: 0.8rem;
+    }
+    
+    .card-raca {
+        flex-direction: column;
+        text-align: left;
     }
 
-    section button {
-        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
-        font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
+    .conteudo-texto, .imagem-cachorro {
+        flex: 1 1 100%;
     }
 
-    .resultados-pesquisa {
-        width: 90%; /* Largura da caixa de resultados em telas pequenas */
-        height: 50vh; /* Altura da caixa de resultados em telas pequenas */
+    .conteudo-texto p {
+        margin: 0.5rem 0; 
     }
 
-    .item-resultado h2 {
-        font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
+    .linha-infos {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        
+    }
+
+    .imagem-cachorro img {
+        max-width: 100%;
     }
 
     footer {
-        font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
+        text-align: center;
+        padding: 1.5rem 1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    footer p {
+        margin: 0.4rem auto;
+        max-width: 90%;
+        white-space: normal;
+    }
+
+}
+
+@media (max-width: 480px) {
+    body { 
+        background-image: url('fundotelasmenores.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+
+    h1 {
+        font-size: 1.8rem; 
+        margin-top: 12rem;
+        letter-spacing: 0.1rem; 
+    }
+
+    .titulo-container h1 {
+        font-size: 1.6rem;
+    }
+
+    .subtitulo {
+        font-size: 0.95rem;
+    }
+
+    .logo {
+        width: 20%; 
+        margin-top: 1rem;
+        }
+
+    section input {
+        width: 90%;
+    }
+
+    section button {
+        padding: 0.6rem 1rem; 
+        font-size: 0.9rem; 
+    }
+
+    .card-raca {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conteudo-texto, .imagem-cachorro {
+        flex: 1 1 100%;
+    }
+
+    .imagem-cachorro img {
+        max-width: 80%;
+    }
+
+    footer {
+        text-align: center;
+        padding: 1.5rem 1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    footer p {
+        margin: 0.4rem auto;
+        max-width: 95%;
+        white-space: normal;
     }
 }
